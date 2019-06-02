@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Kornit Digital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .wrapper{
+                min-width: 1500px;
+                height:2655px;
+                background-color: goldenrod;
+                background-image: url(4X/Asset6.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+                     
+.circle-container {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+  padding: 32%;
+}
+.circle-container > * {
+  display: block;
+  position: absolute;
+/*  top: 50%;
+  left: 50%;*/
+  /*width: 6em;*/
+  /*height: 6em;*/
+  /*margin: -3em;*/
+}
+.circle-container > :nth-of-type(1) {
+  transform: rotate(-103deg) translate(25em) rotate(102deg);
+}
+.circle-container > :nth-of-type(2) {
+  transform: rotate(-43deg) translate(25em) rotate(42deg);
+}
+.circle-container > :nth-of-type(3) {
+  transform: rotate(18deg) translate(25em) rotate(-18deg);
+}
+.circle-container > :nth-of-type(4) {
+  transform: rotate(199deg) translate(25em) rotate(-199deg);
+}
+/*.circle-container > :nth-of-type(5) {
+  transform: rotate(240deg) translate(20em) rotate(-180deg);
+}
+.circle-container > :nth-of-type(6) {
+  transform: rotate(300deg) translate(20em) rotate(-225deg);
+}*/
+
+.circle-container img {
+  display: block;
+  width: 100%;
+  /*border-radius: 50%;*/
+}
+        </style>
+    </head>
+    <body>
+        <script>
+            var url = window.location;
+            var pathname = url.pathname.split('/');
+            var fileName = pathname[2].split('.');
+            fileName = fileName[0];
+            console.log(fileName);
+            console.log(url.search);
+            function moveData(info){
+                console.log(info);
+                console.log((Number(fileName)+1)+'.html'+url.search+'&'+fileName+'='+info);
+                window.location.href = (Number(fileName)+1)+'.html'+url.search+'&'+fileName+'='+info;
+            }
+        </script>
+        <div class="wrapper">
+            <div class="first" style="height:20%"></div>
+            <div class="second" style="height:20%"></div>
+            <div class="therd" style="height:50%">
+                <ul class='circle-container'>
+                    <li onclick="moveData('5-50')"><img src='4x/Asset8.png'></li>
+                    <li onclick="moveData('50-500')"><img src='4x/Asset9.png'></li>
+                    <li onclick="moveData('more_than_500')"><img src='4x/Asset10.png'></li>
+                    <li onclick="moveData('1-5')"><img src='4x/Asset7.png'></li>
+                <li><img src='4x/Asset11.png'></li>
+            </ul>
+                
+            </div>
+            <div class="therd" style="height:10%"></div>
+        </div>
+    </body>
+</html>

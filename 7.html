@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             .wrapper{
-                min-width: 1500px;
-                height:2655px;
+                min-width: 100%;
+                height:100vh;
                 background-color: goldenrod;
                 background-image: url(7X/Asset14.png);
                 background-repeat: no-repeat;
@@ -23,11 +23,13 @@
   border-radius: 50%;
   list-style: none;
   box-sizing: content-box;
-  padding: 32%;
+  padding: 25%;
 }
 .circle-container > * {
   display: block;
   position: absolute;
+  top: 70%;
+  left: 3%;
 /*  top: 50%;
   left: 50%;*/
   /*width: 6em;*/
@@ -61,20 +63,31 @@
         </style>
     </head>
     <body>
+        
         <div class="wrapper">
-            <div class="first" style="height:20%"></div>
-            <div class="second" style="height:20%"></div>
+            <!-- <div class="first" style="height:20%"></div> -->
+            <!-- <div class="second" style="height:20%"></div> -->
             <div class="therd" style="height:50%">
                 <ul class='circle-container'>
 <!--                    <li><a href=""><img src='2x/Asset1.png'></a></li>
                     <li><a href=""><img src='2x/Asset2.png'></a></li>
                     <li><a href=""><img src='2x/Asset3.png'></a></li>
-                    <li><a href=""><img src='2x/Asset4.png'></a></li>
-                <li><img src='2x/Asset5.png'></li>-->
+                    <li><a href=""><img src='2x/Asset4.png'></a></li>-->
+                <li>
+                  <video id="vid" width="640" height="480"  controls autoplay="true" muted autostart="1">
+                    <source src="new Kornit Atlas.mp4" type="video/mp4">
+                    <source src="new Kornit Atlas.ogg" type="video/ogg">
+                  
+                  </video>
+                </li> 
             </ul>
                 
             </div>
             <div class="therd" style="height:10%"></div>
         </div>
+        <script>
+            var vid = document.getElementById("vid");
+            // vid.play();
+        </script>
     </body>
 </html>

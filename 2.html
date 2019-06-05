@@ -7,38 +7,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             .wrapper{
-                min-width: 1500px;
-                height:2655px;
+                width: 100%;
+                height: 100vh;
                 background-color: goldenrod;
                 background-image: url(2X/Asset1.png);
                 background-repeat: no-repeat;
                 background-size: cover;
             }
                      
-.circle-container {
+            .circle-container {
   position: relative;
+  /* text-align: -webkit-center; */
+  top: 30%;
+  left:35%;
   width: 20em;
   height: 20em;
   padding: 0;
   border-radius: 50%;
   list-style: none;
   box-sizing: content-box;
-  padding: 32%;
+
 }
 .circle-container > * {
   display: block;
-  position: absolute;
-/*  top: 50%;
-  left: 50%;*/
-  /*width: 6em;*/
-  /*height: 6em;*/
-  /*margin: -3em;*/
+  position: fixed;
+  width: 400px;
+  height: 6em;
+  /* margin: 3em; */
+  
 }
 .circle-container > :nth-of-type(1) {
-  transform: rotate(-41deg) translate(25em) rotate(40deg);
+  transform: rotate(-41deg) translate(8em) rotate(40deg);
 }
 .circle-container > :nth-of-type(2) {
-  transform: rotate(-193deg) translate(25em) rotate(194deg);
+  transform: rotate(-193deg) translate(9em) rotate(194deg);
 }
 /*.circle-container > :nth-of-type(3) {
   transform: rotate(47deg) translate(25em) rotate(-48deg);
@@ -55,7 +57,7 @@
 
 .circle-container img {
   display: block;
-  width: 100%;
+  width: 40%;
   /*border-radius: 50%;*/
 }
         </style>
@@ -68,7 +70,9 @@
             fileName = fileName[0];
             
             function moveData(info){
-                window.location.href = (Number(fileName)+1)+'.html'+url.search+'&'+fileName+'='+info;
+              // alert('3.html');
+              console.log('3.html'+url.search+'&2='+info);
+                 window.location.href = '3.html'+url.search+'&2='+info;
             }
         </script>
         <div class="wrapper">
@@ -77,7 +81,7 @@
             <div class="therd" style="height:50%">
                 <ul class='circle-container'>
                     <li><a href="move to presto page"><img src='2x/Asset3.png'></a></li>
-                    <li onclick="moveData('finished_goods')"><img src='2x/Asset4.png'></li>  
+                    <li onclick="moveData('finished_goods')"><img  src='2x/Asset4.png'></li>  
                     
                 <li><img src='2x/Asset2.png'></li>
             </ul>

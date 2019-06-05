@@ -7,44 +7,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             .wrapper{
-                min-width: 1500px;
-                height:2655px;
+                width: 100%;
+                height: 100vh;
                 background-color: goldenrod;
                 background-image: url(1x/Asset1.png);
                 background-repeat: no-repeat;
-                background-size: cover;
+                 background-size: cover; 
             }
                      
+/* .circle-container {
+  position: relative;
+  text-align: -webkit-center;
+  top: 30%;
+
+}
+.circle-container > * {
+  display: block;
+  position: absolute;
+  margin: 3em;
+  
+} */
 .circle-container {
   position: relative;
+  /* text-align: -webkit-center; */
+  top: 30%;
+  left:35%;
   width: 20em;
   height: 20em;
   padding: 0;
   border-radius: 50%;
   list-style: none;
   box-sizing: content-box;
-  padding: 32%;
+
 }
 .circle-container > * {
   display: block;
-  position: absolute;
-/*  top: 50%;
-  left: 50%;*/
-  /*width: 6em;*/
-  /*height: 6em;*/
-  /*margin: -3em;*/
+  position: fixed;
+  width: 400px;
+  height: 6em;
+  /* margin: 3em; */
+  
 }
 .circle-container > :nth-of-type(1) {
-  transform: rotate(-103deg) translate(25em) rotate(102deg);
+  transform: rotate(-103deg) translate(8em) rotate(102deg);
 }
 .circle-container > :nth-of-type(2) {
-  transform: rotate(-43deg) translate(25em) rotate(42deg);
+  transform: rotate(-43deg) translate(8em) rotate(42deg);
 }
 .circle-container > :nth-of-type(3) {
-  transform: rotate(47deg) translate(25em) rotate(-48deg);
+  transform: rotate(47deg) translate(8em) rotate(-48deg);
 }
 .circle-container > :nth-of-type(4) {
-  transform: rotate(170deg) translate(25em) rotate(-170deg);
+  transform: rotate(170deg) translate(8em) rotate(-170deg);
 }
 /*.circle-container > :nth-of-type(5) {
   transform: rotate(240deg) translate(20em) rotate(-180deg);
@@ -55,7 +69,7 @@
 
 .circle-container img {
   display: block;
-  width: 100%;
+  width: 40%;
   /*border-radius: 50%;*/
 }
         </style>
@@ -69,7 +83,7 @@
             <div class="first" style="height:20%"></div>
             <div class="second" style="height:20%"></div>
             <div class="therd" style="height:50%">
-                <ul class='circle-container'>
+               <ul class='circle-container'>
                     <li><a href="2.html?1=promotional"><img src='1x/Asset3.png'></a></li>
                     <li><a href="2.html?1=online"><img src='1x/Asset4.png'></a></li>
                     <li><a href="2.html?1=fasion"><img src='1x/Asset5.png'></a></li>

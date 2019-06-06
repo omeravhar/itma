@@ -30,30 +30,8 @@
   position: absolute;
   top: 70%;
   left: 3%;
-/*  top: 50%;
-  left: 50%;*/
-  /*width: 6em;*/
-  /*height: 6em;*/
-  /*margin: -3em;*/
+
 }
-/*.circle-container > :nth-of-type(1) {
-  transform: rotate(-103deg) translate(25em) rotate(102deg);
-}
-.circle-container > :nth-of-type(2) {
-  transform: rotate(-43deg) translate(25em) rotate(42deg);
-}
-.circle-container > :nth-of-type(3) {
-  transform: rotate(47deg) translate(25em) rotate(-48deg);
-}
-.circle-container > :nth-of-type(4) {
-  transform: rotate(170deg) translate(25em) rotate(-170deg);
-}*/
-/*.circle-container > :nth-of-type(5) {
-  transform: rotate(240deg) translate(20em) rotate(-180deg);
-}
-.circle-container > :nth-of-type(6) {
-  transform: rotate(300deg) translate(20em) rotate(-225deg);
-}*/
 
 .circle-container img {
   display: block;
@@ -65,19 +43,14 @@
     <body>
         
         <div class="wrapper">
-            <!-- <div class="first" style="height:20%"></div> -->
-            <!-- <div class="second" style="height:20%"></div> -->
+
             <div class="therd" style="height:50%">
                 <ul class='circle-container'>
-<!--                    <li><a href=""><img src='2x/Asset1.png'></a></li>
-                    <li><a href=""><img src='2x/Asset2.png'></a></li>
-                    <li><a href=""><img src='2x/Asset3.png'></a></li>
-                    <li><a href=""><img src='2x/Asset4.png'></a></li>-->
+
                 <li>
-                  <video id="vid" width="640" height="480"  controls autoplay="true" muted autostart="1">
-                    <source src="new Kornit Atlas.mp4" type="video/mp4">
-                    <source src="new Kornit Atlas.ogg" type="video/ogg">
-                  
+                  <video id="vid" width="640" height="480"  controls autoplay muted 
+                         >
+                    <source src="Atlas.mp4" type="video/mp4">
                   </video>
                 </li> 
             </ul>
@@ -87,7 +60,16 @@
         </div>
         <script>
             var vid = document.getElementById("vid");
-            // vid.play();
+            var data = window.location.search;
+                        data = data.replace('?','').split('&');
+                        calcData=[];
+                        data.forEach(function(element){
+                            calcData.push(element.substr(2));
+//                            console.log(element.substr(2));
+                        });
+                        console.log(calcData[0]);
+                        var src = vid.getElementsByTagName('source')[0];
+                        src.setAttribute('src','presto.mp4');
         </script>
     </body>
 </html>

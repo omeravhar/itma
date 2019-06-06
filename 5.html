@@ -31,22 +31,22 @@
 .circle-container > * {
   display: block;
   position: fixed;
-  width: 400px;
-  height: 6em;
+  width: 220px;
+  height: 220px;
   /* margin: 3em; */
   
 }
 .circle-container > :nth-of-type(1) {
-  transform: rotate(-103deg) translate(8em) rotate(102deg);
+  transform: rotate(-103deg) translate(13em) rotate(102deg);
 }
 .circle-container > :nth-of-type(2) {
-  transform: rotate(-43deg) translate(8em) rotate(42deg);
+  transform: rotate(-43deg) translate(13em) rotate(42deg);
 }
 .circle-container > :nth-of-type(3) {
-  transform: rotate(18deg) translate(8em) rotate(-18deg);
+  transform: rotate(18deg) translate(13em) rotate(-18deg);
 }
 .circle-container > :nth-of-type(4) {
-  transform: rotate(199deg) translate(8em) rotate(-199deg);
+  transform: rotate(199deg) translate(13em) rotate(-199deg);
 }
 /*.circle-container > :nth-of-type(5) {
   transform: rotate(240deg) translate(20em) rotate(-180deg);
@@ -57,7 +57,9 @@
 
 .circle-container img {
   display: block;
-  width: 40%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   /*border-radius: 50%;*/
 }
         </style>
@@ -82,7 +84,8 @@
             <div class="therd" style="height:50%">
                 <ul class='circle-container'>
                     <li onclick="moveData('all_fabrics')"><img src='5x/Asset2.png'></li>
-                    <li onclick="moveData('polyester')"><img src='5x/Asset3.png'></li>
+                    <!--<li onclick="moveData('polyester')"><img src='5x/Asset3.png'></li>-->
+                    <li><a href="6.html?5=polypro"><img src='5x/Asset3.png'></a></li>
                     <li onclick="moveData('different')"><img src='5x/Asset4.png'></li>
                     <li onclick="moveData('cotton')"><img src='5x/Asset1.png'></li>
                 <li><img src='5x/Asset5.png'></li>

@@ -49,10 +49,19 @@
                         data = data.replace('?','').split('&');
                         calcData=[];
                         data.forEach(function(element){
+                            
                             calcData.push(element.substr(2));
                         });
                         console.log(calcData);
-//                        console.log(data.search.split('&'));
+                        function moveTo(){
+                        if(calcData[0]=='presto'){
+                            window.location.href='7.html?mc=presto';
+                        }else if(calcData[0]=='polypro'){
+                            window.location.href='7.html?mc=polypro';
+                        }    
+                            
+                        };
+                        
                     </script>
         <div class="wrapper">
             <div class="first" style="height:20%"></div>
@@ -60,7 +69,7 @@
             <div class="therd" style="height:50%">
                 <ul class='circle-container'>
                     
-                <li><img src='6x/Asset1.png'></li>
+                    <li onclick="moveTo()"><img src='6x/Asset1.png'></li>
             </ul>
                 
             </div>

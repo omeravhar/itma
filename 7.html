@@ -10,7 +10,7 @@
                 min-width: 100%;
                 height:100vh;
                 background-color: goldenrod;
-                background-image: url(7X/Asset14.png);
+                /*background-image: url(7X/Asset14.png);*/
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -64,12 +64,13 @@
                         data = data.replace('?','').split('&');
                         calcData=[];
                         data.forEach(function(element){
-                            calcData.push(element.substr(2));
+                            calcData.push(element.substr(3));
 //                            console.log(element.substr(2));
                         });
                         console.log(calcData[0]);
+                        document.getElementsByClassName('wrapper')[0].style.backgroundImage = "url('7x/"+calcData[0]+".png')";
                         var src = vid.getElementsByTagName('source')[0];
-                        src.setAttribute('src','presto.mp4');
+                        src.setAttribute('src',calcData[0]+'.mp4');
         </script>
     </body>
 </html>

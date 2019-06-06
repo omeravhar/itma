@@ -51,15 +51,26 @@
                         data.forEach(function(element){
                             
                             calcData.push(element.substr(2));
+                             
                         });
-                        console.log(calcData);
+//                        console.log(calcData);
                         function moveTo(){
                         if(calcData[0]=='presto'){
                             window.location.href='7.html?mc=presto';
                         }else if(calcData[0]=='polypro'){
                             window.location.href='7.html?mc=polypro';
+                        }else if ("0-100" == calcData.find(function(data){
+                                return data == '0-100';
+                            })){ 
+                            window.location.href='7.html?mc=breeze';
+                        }else if('100-500' == calcData.find(function(data){
+                                return data == '100-500';
+                            })){
+                            window.location.href='7.html?mc=hd';
+                        }else{
+                            window.location.href='7.html?mc=atlas';
                         }    
-                            
+                           
                         };
                         
                     </script>

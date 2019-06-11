@@ -8,8 +8,9 @@ document.getElementsByClassName('circle-container')[0].style.top='30%';
 
 
 
-document.addEventListener('keydown', function(e) {
-      
-  if (e.key === 's')
-    alert('settings');
-})
+//document.addEventListener('keydown', function(e) {
+//      
+//  if (e.key === 's')
+//    window.open ("settings.html",
+//"mywindow","menubar=1,resizable=1,width=350,height=250");
+//})
